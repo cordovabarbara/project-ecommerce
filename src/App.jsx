@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 function App() {
 
-const { productGlobal } = useSelector (state => state)
+const { productsGlobal } = useSelector (state => state)
 
 const dispatch = useDispatch ()
 
@@ -15,7 +15,7 @@ const dispatch = useDispatch ()
     dispatch (getAllProductsThunk ())
   }, [])
 
-console.log(productGlobal);
+console.log(productsGlobal);
 
   return (
     <>
