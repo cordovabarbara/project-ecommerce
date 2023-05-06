@@ -3,11 +3,9 @@ import './App.css'
 import Home from './pages/Home'
 import { useEffect } from 'react'
 import { getAllProductsThunk } from './store/slices/products.slice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 function App() {
-
-const { productsGlobal } = useSelector (state => state)
 
 const dispatch = useDispatch ()
 
@@ -15,7 +13,6 @@ const dispatch = useDispatch ()
     dispatch (getAllProductsThunk ())
   }, [])
 
-console.log(productsGlobal);
 
   return (
     <>
