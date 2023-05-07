@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { getAllProductsThunk } from './store/slices/products.slice'
 import { useDispatch } from 'react-redux'
 import IdProduct from './pages/IdProduct'
+import Header from './components/shared/Header'
 
 function App() {
 
@@ -18,12 +19,13 @@ const dispatch = useDispatch ()
   return (
     <>
       <div>
+      <Header/>
       <Routes>
     <Route path='/' element={<Home />}/>
     <Route path='/product/:id' element={<IdProduct />}/>
     <Route/>
-  </Routes>
-      </div>
+    </Routes>
+    </div>
     </>
   )
 }

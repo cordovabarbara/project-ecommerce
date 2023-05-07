@@ -12,7 +12,7 @@ const { productsGlobal }  = useSelector (state => state)
         productsGlobal?.map(prod => (
           <InfoProduct
             key={prod.id}
-            product ={prod}
+            prod ={prod}
           />
         ))
       }

@@ -4,6 +4,7 @@ import SliderImg from "../components/AllProducts/SliderImg";
 import { useParams } from "react-router-dom";
 import useFetch from '../hooks/useFetch'
 import ProductInfo from "../components/AllProducts/Productinfo";
+import SimilarProduct from "../components/AllProducts/SimilarProduct";
 
 
 
@@ -26,6 +27,7 @@ const {id} = useParams()
     <div>
     <ProductInfo product={product}/>
     <SliderImg product={product}/>
+    <SimilarProduct product={product}/>
     </div>
   ) 
 }
