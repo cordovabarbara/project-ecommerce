@@ -15,7 +15,8 @@ e.stopPropagation()
     return (
         <article className="product__box" onClick={handleSelectProductId}>
             <header className="product__header">
-                <img className="product__img" src={prod.images[0].url} alt="" />
+                <img className="product__img product__img1" src={prod.images[0].url} alt="" />
+                <img className="product__img product__img2" src={prod.images[1].url} alt="" />
             </header>
             <section className="product__setion">
                 <h4 className="product__subtitle">{prod.brand}</h4>
