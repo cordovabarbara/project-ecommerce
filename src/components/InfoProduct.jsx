@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 const InfoProduct = ({ prod }) => {
 
     const navigate =  useNavigate()
-const handleSelectProductId = () => {
+
+    const handleSelectProductId = () => {
     navigate(`/product/${prod.id}`)
 }
 const handleClickBtn = e => {

@@ -8,6 +8,7 @@ import IdProduct from './pages/IdProduct'
 import Header from './components/shared/Header'
 import Register from './pages/Register'
 import Login from './pages/Login'
+import configToken from './utils/configToken'
 
 function App() {
 
@@ -16,6 +17,12 @@ const dispatch = useDispatch ()
   useEffect(() => {
     dispatch (getAllProductsThunk ())
   }, [])
+
+  const getPostCart = (url,data) => {
+    axios.post (url, data, configToken ())
+      .then(res => console.log(res.data))
+      .catch (err => console.log(err))
+  }
 
 
 return (
@@ -33,4 +40,3 @@ return (
 }
 
 export default App
-
