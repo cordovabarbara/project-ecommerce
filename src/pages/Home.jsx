@@ -4,16 +4,16 @@ import InfoProduct from '../components/InfoProduct';
 
 const Home = () => {
 
-  const { productsGlobal }  = useSelector (state => state)
+const { productsGlobal }  = useSelector (state => state)
 
   return (
     <div>
       {
         productsGlobal?.map(prod => (
-            <InfoProduct
+          <InfoProduct
             key={prod.id}
             product ={prod}
-            />
+          />
         ))
       }
     </div>
