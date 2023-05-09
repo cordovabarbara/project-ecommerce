@@ -9,6 +9,7 @@ import Header from './components/shared/Header'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import configToken from './utils/configToken'
+import Cart from './pages/Cart'
 
 function App() {
 
@@ -33,6 +34,7 @@ return (
     <Route path='/register' element={<Register />}/>
     <Route path='/login' element={<Login />}/>
     <Route path='/product/:id' element={<IdProduct />}/>
+    <Route path='/cart' element={<Cart />}/>
     <Route/>
     </Routes>
     </div>
