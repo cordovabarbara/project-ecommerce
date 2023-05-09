@@ -1,34 +1,43 @@
 import React, { useState } from "react";
+import useCrudCart from "../../hooks/useCrudCart";
 
 const ProductInfo = ({ product }) => {
-    const [quantify, setQuantify] = useState(1);
+const [quantity, setQuantity] = useState(1);
+const { addProductToCart } = useCrudCart()
 
-    const plus = () => setQuantify(quantify + 1);
+    const plus = () => setQuantity(quantity + 1);
     const minus = () => {
-        if (quantify - 1 >= 1) {
-            setQuantify(quantify - 1);
+        if (quantity - 1 >= 1) {
+            setQuantity(quantity - 1);
         }
     };
 
+    const handleAddToCart = () =>{
+        const data = {
+            quantity,
+            productId: product.id
+        }
+        addProductToCart(data)
+    }
     return (
-        <section>
-            <h3>{product?.brand}</h3>
-            <h2>{product?.title}</h2>
-            <p>{product?.description}</p>
-            <footer>
-                <div>
-                    <span>Price</span>
-                    <span>{product?.price}</span>
+        <section className="productinfo__box">
+            <h3 className="product__brand">{product?.brand}</h3>
+            <h2 className="product__title">{product?.title}</h2>
+            <p className="product__descri">{product?.description}</p>
+            <footer className="product__footer">
+                <div className="product__info">
+                    <span className="product__price1">Price</span>
+                    <span className="product__price2">{product?.price}</span>
                 </div>
-                <div>
-                    <span>Quantify</span>
+                <div className="product__btns">
+                    <span className="product__quantify">Quantify</span>
                     <div>
-                        <button onClick={minus}> - </button>
-                        <div>{quantify}</div>
-                        <button onClick={plus}> + </button>
+                        <button className="product__btn-minus" onClick={minus}> - </button>
+                        <div>{quantity}</div>
+                        <button className="product__btn-plus"  onClick={plus}> + </button>
                     </div>
                 </div>
-                <button> Add to car <i className='bx bx-cart-add'></i></button>
+                <button onClick={handleAddToCart}> Add to cart <i className='bx bx-cart-add'></i></button>
             </footer>
         </section>
     );
