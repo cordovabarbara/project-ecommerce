@@ -1,6 +1,7 @@
 import axios from "axios"
 import configToken from "../utils/configToken"
 import { useDispatch } from "react-redux"
+import { getAllProductsCartThunk } from "../store/slices/cart.slice"
 
 const useCrudCart = () => {
 
@@ -8,12 +9,17 @@ const useCrudCart = () => {
 
     const addProductToCart = data =>{
         const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
-        axios.post (url, data, configToken ())
-        .then(res => {
+        axios.post(url, data, configToken ())
+            .then(res => {
             console.log(res.data)
             dispatch(getAllProductsCartThunk())
         })
-        .catch (err => console.log(err))
+        .catch (err => {
+            console.log(err)
+            if (err.response?.data?.error === 'Product already added to cat'){
+                //ejecutar el update
+            }
+    })
     }
 
     const deleteProductFromCart = id =>{
@@ -35,8 +41,6 @@ const useCrudCart = () => {
         })
         .catch (err => console.log(err))
     }
-
-
 
     return {addProductToCart, deleteProductFromCart, updateProdutInCart}
 }

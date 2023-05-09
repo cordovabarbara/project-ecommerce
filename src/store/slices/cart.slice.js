@@ -15,7 +15,7 @@ export default cartSlice.reducer
 
 export const getAllProductsCartThunk = () => dispatch => {
     const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
-    axios.get(url, configToken )
+    axios.get(url, configToken())
     .then(res => dispatch (setCartGlobal (res.data)))
     .catch (err => console.log(err))
 

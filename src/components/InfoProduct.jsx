@@ -1,16 +1,22 @@
 import React from "react";
 import "./styles/infoproduct.css";
 import { useNavigate } from "react-router-dom";
+import useCrudCart from "../hooks/useCrudCart";
 
 const InfoProduct = ({ prod }) => {
-
     const navigate =  useNavigate()
+    const { addProductToCart } = useCrudCart()
 
     const handleSelectProductId = () => {
     navigate(`/product/${prod.id}`)
 }
 const handleClickBtn = e => {
 e.stopPropagation()
+const data = {
+    quantity: 1,
+    productId: prod.id,
+}
+addProductToCart(data)
 }
 
     return (
