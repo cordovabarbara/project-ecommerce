@@ -17,10 +17,10 @@ const Cart = () => {
   return (
     <div>
     {
-        cartGlobal?.map (prodCart => (
+        cartGlobal?.map (prodInCart => (
             <ProductInCart
-            key={prodCart.id}
-            prodCart={prodCart}
+            key={prodInCart.id}
+            prodInCart={prodInCart}
             />
         ))
     }
