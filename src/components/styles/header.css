@@ -1,0 +1,18 @@
+.header__box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.navbar{
+    margin: 1em;
+}
+.list__box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}

@@ -12,7 +12,8 @@ const Cart = () => {
   }, [])
   
   const { cartGlobal }  = useSelector(state => state)
-  console.log(cartGlobal)
+
+  const totalCartGlobal = cartGlobal?.reduce((acc, cv) => acc + cv.quantity * cv.product.price, 0)
 
   return (
     <div>
@@ -25,7 +26,12 @@ const Cart = () => {
         ))
     }
     
+    <footer>
+      <h3> Total: {totalCartGlobal}</h3>
+      <button> Buy now</button>
+      </footer>
     </div>
+   
   )
 }
 
