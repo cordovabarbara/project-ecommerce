@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import InfoProduct from '../components/InfoProduct';
 import './styles/homeProduct.css'
+import FilterCategory from '../components/FilterCategory';
 
 
 const Home = () => {
@@ -22,8 +23,12 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
     <>     
     <div className='home__product'>
     <input className='home__input' ref={inputValue} onChange={handleChangeinput} type="text" placeholder='What are you lookin for?'/>
-    <button className='btn__search'><i class='bx bx-search-alt-2'></i></button>
+    <button className='btn__search'><i className='bx bx-search-alt-2'></i></button>
     </div>
+
+    <FilterCategory/>
+
+
     <div>
       {
         productFilter?.map(prod => (

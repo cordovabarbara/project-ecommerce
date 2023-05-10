@@ -12,8 +12,8 @@ const productsSlice = createSlice({
 export const {setProductsGlobal} = productsSlice.actions
 export default productsSlice.reducer
 
-export const getAllProductsThunk = () => dispath => {
-    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/products'
+export const getAllProductsThunk = (url = 'https://e-commerce-api-v2.academlo.tech/api/v1/products') => 
+dispath => {
     axios.get(url)
     .then(res => dispath(setProductsGlobal(res.data)))
     .catch(err => console.log(err))

@@ -25,8 +25,8 @@ const {id} = useParams()
 
   return(
     <div>
-    <ProductInfo product={product}/>
     <SliderImg product={product}/>
+    <ProductInfo product={product}/>
     <SimilarProduct product={product}/>
     </div>
   ) 
