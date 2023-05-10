@@ -16,7 +16,7 @@
 }
 
 .product__header {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(128, 128, 128);
   padding: 1em;
   width: 100%;
   aspect-ratio: 1.5;
@@ -31,7 +31,7 @@
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 900ms ease;
+  transition: opacity 800ms ease;
 }
 
 .product__img1{
