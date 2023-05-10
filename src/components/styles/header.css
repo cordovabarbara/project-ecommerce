@@ -16,12 +16,13 @@
 .btn__menu{
     background-color: orangered;
     border: none;
-    font-size: 20px;
+    font-size: 28px;
     cursor: pointer;
     color: white;
     width: 50px;
+    height: 40px;
     position: absolute;
-    margin-left: 20em;
+    margin-left: 14em;
 
 }
 
@@ -32,28 +33,30 @@
 }
 
 .list__item{
-    list-style: none;
     font-size: 20px;
-    color: white;
-   
 }
 
 
+.navbar__a{
+    color: white;
+}
+
 .list__box.show {
-    margin-top: 0.9em;
+    margin-top: 1.4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
     right: 0;
     position: absolute;
-    background-color: orangered;
-    height: 200px;
+    background-color: rgba(255, 68, 0, 0.959);
+    height: 290px;
     width: 140px;
     z-index: 1;
     border-radius: 0.25rem;
     margin-right: 0.3em;
-    
 
+    transition: transform 0.3s ease;
+    transform: translateX(0);
   }

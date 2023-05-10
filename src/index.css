@@ -29,6 +29,11 @@
   select {
     font-family: inherit;
   }
+
+  a{
+    text-decoration: none;
+  }
+  
   img {
     width: 100%;
   }
