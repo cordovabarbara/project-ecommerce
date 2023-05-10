@@ -25,6 +25,8 @@
   }
   button {
     font-family: inherit;
+    border: none;
+    cursor: pointer;
   }
   select {
     font-family: inherit;
