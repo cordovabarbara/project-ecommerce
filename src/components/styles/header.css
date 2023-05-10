@@ -1,18 +1,59 @@
 .header__box{
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    gap: 1em;
-    padding-bottom: 1em;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    margin-left: 1em;
 }
 
-.navbar{
-    margin: 1em;
+.navbar__title{
+    color: orangered;
 }
+
+
+.btn__menu{
+    background-color: orangered;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    width: 50px;
+    position: absolute;
+    margin-left: 20em;
+
+}
+
+
 .list__box{
+    display: none;
+    
+}
+
+.list__item{
+    list-style: none;
+    font-size: 20px;
+    color: white;
+   
+}
+
+
+.list__box.show {
+    margin-top: 0.9em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 1em;
-}
+    right: 0;
+    position: absolute;
+    background-color: orangered;
+    height: 200px;
+    width: 140px;
+    z-index: 1;
+    border-radius: 0.25rem;
+    margin-right: 0.3em;
+    
+
+  }
