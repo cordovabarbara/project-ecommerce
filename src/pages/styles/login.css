@@ -1,0 +1,11 @@
+.login__ppl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.login__title{
+    color: orangered;
+}
