@@ -20,6 +20,7 @@ addProductToCart(data)
 }
 
     return (
+        <div className="product__general-box">
         <article className="product__box" onClick={handleSelectProductId}>
             <header className="product__header">
                 <img className="product__img product__img1" src={prod.images[0].url} alt="" />
@@ -37,6 +38,7 @@ addProductToCart(data)
             <i className='bx bx-cart-alt'></i>
             </button>
         </article>
+        </div>
     );
 };
 

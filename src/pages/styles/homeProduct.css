@@ -1,6 +1,28 @@
-.home__product {
+.home__product{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-bottom: 2em;
+}
+
+
+.home__input{
+    width: 300px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__search{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-color: orangered;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    width: 50px;
+    height: 30px;
+    align-items: center;
     justify-content: center;
 }

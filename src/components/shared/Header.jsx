@@ -4,7 +4,7 @@ import '../styles/header.css'
 
 const Header = () => {
 
-  const [visibleMenu, setVisibleMenu] = useState(true)
+  const [visibleMenu, setVisibleMenu] = useState(true);
 
   useEffect(() => {
     function handleMenu() {
@@ -35,7 +35,7 @@ const Header = () => {
       <header className='header__box'>
           <h1 className='header__title'><Link className='navbar__title' to='/'>E-commerce</Link></h1>
             <button className='btn__menu' onClick={toggleMenuVisible}>
-              <i class='bx bx-menu'></i></button>
+              <i className='bx bx-menu'></i></button>
               {visibleMenu && (
                 <nav className='navbar'>
                   <ul className={`list__box ${visibleMenu ? 'show' : ''}`}>

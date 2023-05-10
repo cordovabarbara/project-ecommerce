@@ -19,9 +19,11 @@ const handleChangeinput = () =>{
 const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().includes(inputSearch))
 
   return (
+    <>
     <div className='home__product'>
-    <input ref={inputValue} onChange={handleChangeinput} type="text"/>
-
+    <input className='home__input' ref={inputValue} onChange={handleChangeinput} type="text" placeholder='What are you lookin for?'/>
+    <button className='btn__search'><i class='bx bx-search-alt-2'></i></button>
+    </div>
     <div>
       {
         productFilter?.map(prod => (
@@ -32,7 +34,8 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
         ))
       }
     </div>
-    </div>
+    
+    </>
   )
 }
 
