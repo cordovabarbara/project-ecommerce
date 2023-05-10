@@ -26,7 +26,10 @@ const Header = () => {
   const toggleMenuVisible = () => {
     setVisibleMenu(!visibleMenu);
   };
-  
+
+  const handleLinkClick = () => {
+    toggleMenuVisible();
+  };
 
     return (
       <header className='header__box'>
@@ -36,10 +39,10 @@ const Header = () => {
               {visibleMenu && (
                 <nav className='navbar'>
                   <ul className={`list__box ${visibleMenu ? 'show' : ''}`}>
-                      <li className='list__item'><Link className='navbar__a'  to='/login'>Login</Link></li>
-                      <li className='list__item'><Link className='navbar__a' to='/register'>Register</Link></li>
-                      <li className='list__item'><Link className='navbar__a' to='/purchase'>Purchase</Link></li>
-                      <li className='list__item'><Link className='navbar__a' to='/cart'>Cart</Link></li>
+                      <li onClick={handleLinkClick}><Link className='navbar__a'  to='/login'>Login</Link></li>
+                      <li onClick={handleLinkClick}><Link className='navbar__a' to='/register'>Register</Link></li>
+                      <li onClick={handleLinkClick}><Link className='navbar__a' to='/purchase'>Purchase</Link></li>
+                      <li onClick={handleLinkClick}><Link className='navbar__a' to='/cart'>Cart</Link></li>
                   </ul>
           </nav>
           )}
