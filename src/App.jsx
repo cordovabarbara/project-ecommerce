@@ -10,6 +10,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import configToken from './utils/configToken'
 import Cart from './pages/Cart'
+import Purchases from './pages/Purchases'
 
 function App() {
 
@@ -35,6 +36,7 @@ return (
     <Route path='/login' element={<Login />}/>
     <Route path='/product/:id' element={<IdProduct />}/>
     <Route path='/cart' element={<Cart />}/>
+    <Route path='/purchase' element={<Purchases />}/>
     <Route/>
     </Routes>
     </div>

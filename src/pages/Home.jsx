@@ -1,22 +1,37 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import InfoProduct from '../components/InfoProduct';
 import './styles/homeProduct.css'
 
 const Home = () => {
 
+  const [inputSearch, setInputSearch] = useState('')
+
 const { productsGlobal }  = useSelector (state => state)
+
+const inputValue = useRef()
+
+const handleChangeinput = () =>{
+  setInputSearch(inputValue.current.value.toLowerCase().trim())
+
+
+}
+const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().includes(inputSearch))
 
   return (
     <div className='home__product'>
+    <input ref={inputValue} onChange={handleChangeinput} type="text"/>
+
+    <div>
       {
-        productsGlobal?.map(prod => (
+        productFilter?.map(prod => (
           <InfoProduct
             key={prod.id}
             prod ={prod}
           />
         ))
       }
+    </div>
     </div>
   )
 }
