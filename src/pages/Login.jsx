@@ -1,5 +1,6 @@
 import React from 'react'
 import useAuthentication from '../hooks/useAuthentication'
+import '../pages/styles/login.css'
 
 const Login = () => {
 
@@ -15,9 +16,10 @@ const Login = () => {
 
 
   return (
-    <form onSubmit={handleLogin}>
-        <h2>Login</h2>
-        <div>
+    <div className='login__ppl'>
+    <form className='login__form' onSubmit={handleLogin}>
+        <h2 className='login__title'>Login</h2>
+        <div className='login__box'>
             <label htmlFor="email">Email</label>
             <input type="email" id='email'></input>
         </div>
@@ -28,6 +30,7 @@ const Login = () => {
         </div>
     <button> Log in</button>
     </form>
+    </div>
   )
 }
 
