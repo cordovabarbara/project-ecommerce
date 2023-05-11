@@ -1,0 +1,39 @@
+.slider__prod{
+    width: 100%;
+    max-width: 500xp;
+    position: relative;
+}
+
+.slider__mov{
+    display:flex;
+    width: 300%;
+    transition: transform 300ms ease;
+    transform: translateX(calc(-2/3 * 100%));
+}
+
+.slider__box-img{
+    padding: 2em;
+    width: 100%;
+    aspect-ratio: 1.5;
+}
+
+.slider__img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slider__btn{
+    width: 2.3em;
+    position: absolute;
+    background-color: orangered;
+    color: white;
+    font-size: medium;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    top: 50%;
+    transform: translate(0,-50%),
+}
+.slider__right{
+    right: 0;
+}

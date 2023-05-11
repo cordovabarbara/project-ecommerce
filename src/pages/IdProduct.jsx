@@ -20,7 +20,7 @@ const {id} = useParams()
 
     useEffect(() => {
     getProductById()
-    }, [])
+    }, [id])
 
 
   return(

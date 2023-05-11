@@ -3,11 +3,17 @@ import { useSelector } from 'react-redux'
 import InfoProduct from '../components/InfoProduct';
 import './styles/homeProduct.css'
 import FilterCategory from '../components/FilterCategory';
+import FilterByPrice from '../components/FilterByPrice';
 
 
 const Home = () => {
 
   const [inputSearch, setInputSearch] = useState('')
+
+  const [fromTo, setFromTo] = useState({
+    from:0,
+    to: Infinity,
+  })
 
 const { productsGlobal }  = useSelector (state => state)
 
@@ -17,7 +23,26 @@ const handleChangeinput = () =>{
   setInputSearch(inputValue.current.value.toLowerCase().trim())
 
 }
+
 const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().includes(inputSearch))
+
+.filter(prod =>{
+  const from = +fromTo.from
+  const to = +fromTo.to
+  const price = prod.price
+  if( from && to){
+    return from <= price && price <= to
+  }
+  if( from && !to ){
+    return from <= price
+  }
+  if(!from && to){
+    return price <= to
+  }
+  if(!from && !to){
+    return true
+  }
+})
 
   return (
     <>     
@@ -27,6 +52,7 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
     </div>
 
     <FilterCategory/>
+    <FilterByPrice setFromTo={setFromTo}/>
 
 
     <div>
