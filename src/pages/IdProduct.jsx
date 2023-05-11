@@ -7,7 +7,6 @@ import ProductInfo from "../components/AllProducts/Productinfo";
 
 
 
-
 const IdProduct = () => {
 const {id} = useParams()
 
