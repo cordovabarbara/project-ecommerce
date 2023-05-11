@@ -81,7 +81,9 @@
 }
 
 .product__btn {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: -5em;
   right: 8em;
   border: none;
@@ -99,7 +101,7 @@
 }
 
 .bx-cart-alt {
-  font-size: 23px;
+  font-size: 22px;
   color: white;
 }
 

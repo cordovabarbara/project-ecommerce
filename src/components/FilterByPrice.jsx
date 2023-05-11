@@ -4,28 +4,40 @@ import { useForm } from "react-hook-form";
 const FilterByPrice = ({ setFromTo }) => {
   const { reset, register, handleSubmit } = useForm();
 
-  const submit = data => {
-    setFromTo(data)
+  const submit = (data) => {
+    setFromTo(data);
     reset({
-      from:'',
-      to:'',
+      from: "",
+      to: "",
     });
   };
 
-
   return (
-    <div>
-      <h3>Price</h3>
+    <div className="price__box">
+      <h3 className="price__title">Price</h3>
       <form onSubmit={handleSubmit(submit)}>
+        <div className="price__opt">
+          <label className="label__name" htmlFor="from">
+            From
+          </label>
+          <input
+            className="input__price"
+            {...register("from")}
+            type="number"
+            id="from"/>
         <div>
-          <label htmlFor="from">From</label>
-          <input {...register("from")} type="number" id="from" />
+          <label className="label__name" htmlFor="to">
+            To
+          </label>
+          <input
+            className="input__price"
+            {...register("to")}
+            type="number"
+            id="from"
+          />
+          </div>
         </div>
-        <div>
-          <label htmlFor="to">To</label>
-          <input {...register("to")} type="number" id="from" />
-        </div>
-        <button>Filter Price</button>
+        <button className="filter__btn">Filter Price</button>
       </form>
     </div>
   );
