@@ -11,7 +11,6 @@ import Login from './pages/Login'
 import configToken from './utils/configToken'
 import Cart from './pages/Cart'
 import Purchases from './pages/Purchases'
-import '../src/app.css'
 
 function App() {
 
