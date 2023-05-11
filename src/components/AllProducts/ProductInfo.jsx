@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useCrudCart from "../../hooks/useCrudCart";
-import '../styles/productinfo.css'
+import './styles/productinfo.css'
 
 const ProductInfo = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
