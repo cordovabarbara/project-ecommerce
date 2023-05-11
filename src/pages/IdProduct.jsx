@@ -3,8 +3,7 @@ import SliderImg from "../components/AllProducts/SliderImg";
 import { useParams } from "react-router-dom";
 import useFetch from '../hooks/useFetch'
 import SimilarProduct from "../components/AllProducts/SimilarProduct";
-import ProductInfo from "../components/AllProducts/Productinfo";
-
+import ProductInfo from "../components/AllProducts/ProductInfo";
 
 
 const IdProduct = () => {
