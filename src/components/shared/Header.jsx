@@ -4,14 +4,14 @@ import '../styles/header.css'
 
 const Header = () => {
 
-  const [visibleMenu, setVisibleMenu] = useState(true);
+  const [visibleMenu, setVisibleMenu] = useState(false);
 
   useEffect(() => {
     function handleMenu() {
       if (window.innerWidth <= 768) {
         setVisibleMenu(false);
       } else {
-        setVisibleMenu(true);
+        setVisibleMenu(false);
       }
     }
 

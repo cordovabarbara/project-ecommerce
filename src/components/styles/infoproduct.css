@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
+  flex-wrap: wrap;
 }
 
 .product__box {
@@ -11,8 +12,6 @@
   max-width: 370px;
   border: 1px solid grey;
   background-color: white;
-
-
 }
 
 .product__header {
@@ -105,5 +104,13 @@
   color: white;
 }
 
+@media (min-width: 767px){
+ 
+  .product__btn{
+    right: 40em;
+    position: absolute;
+  }
 
+
+}
 

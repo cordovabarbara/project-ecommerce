@@ -24,40 +24,60 @@
     height: 40px;
     position: absolute;
     margin-left: 14em;
-
 }
 
 
-.list__box{
-    display: none;
-    
-}
-
-.list__item{
-    font-size: 20px;
-}
-
-
-.navbar__a{
-    color: white;
-}
-
-.list__box.show {
+.list__box {
     margin-top: 1.4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2em;
-    right: 0;
     position: absolute;
-    background-color: rgba(255, 68, 0, 0.959);
-    height: 290px;
-    width: 140px;
+    background-color: rgba(255, 68, 0, 0.815);
+    right: -0.1em;
+    width: 250px;
+    height: 70%;
     z-index: 1;
     border-radius: 0.25rem;
     margin-right: 0.3em;
-
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateX(250px);
+  }
+  
+  .list__box.show {
+    opacity: 1;
     transform: translateX(0);
   }
+  
+.list__item{
+    font-size: 20px;
+}
+
+.navbar__a{
+    color: white;
+}
+
+
+@media (min-width: 767px){
+    .header__box{
+      display: flex;
+      flex-direction: row;
+      padding-left: 30em;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .list__box {
+        margin-top: 1.4em;
+        position: absolute;
+
+        
+    
+
+}
+
+}
+  
+
