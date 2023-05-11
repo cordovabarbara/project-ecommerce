@@ -21,7 +21,7 @@ const {id} = useParams()
 
 
   return(
-    <div>
+    <div className="general__box">
     <SliderImg product={product}/>
     <ProductInfo product={product}/>
     <SimilarProduct product={product}/>

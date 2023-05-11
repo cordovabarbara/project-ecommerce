@@ -3,6 +3,7 @@
     max-width: 500xp;
     position: relative;
     overflow: hidden;
+   
 }
 
 .slider__mov{
@@ -38,4 +39,20 @@
 }
 .slider__right{
     right: 0;
+}
+
+@media (min-width: 767px){
+    .slider__prod{
+        width: 700px;
+    }
+
+    .general__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    
 }
