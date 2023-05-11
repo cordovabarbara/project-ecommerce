@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-
 import SliderImg from "../components/AllProducts/SliderImg";
 import { useParams } from "react-router-dom";
 import useFetch from '../hooks/useFetch'
-import ProductInfo from "../components/AllProducts/Productinfo";
 import SimilarProduct from "../components/AllProducts/SimilarProduct";
+import ProductInfo from "../components/AllProducts/Productinfo";
 
 
 
