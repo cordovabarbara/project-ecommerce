@@ -100,8 +100,6 @@ font-size: 23px;
 letter-spacing: 2px;
 }
 
-
-
 .input__price{
     width:min-content;
     height: 25px;
@@ -124,5 +122,9 @@ letter-spacing: 2px;
     letter-spacing: 2px;
 }
 
-
+@media (min-width: 767px){
+    .btn__filter{
+        margin-left: 39.5em;
+    }
+}
     
