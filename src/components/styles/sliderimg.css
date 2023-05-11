@@ -2,13 +2,14 @@
     width: 100%;
     max-width: 500xp;
     position: relative;
+    overflow: hidden;
 }
 
 .slider__mov{
     display:flex;
     width: 300%;
     transition: transform 300ms ease;
-    transform: translateX(calc(-2/3 * 100%));
+    transform: translateX(calc(-0/3 * 100%));
 }
 
 .slider__box-img{
@@ -32,7 +33,8 @@
     aspect-ratio: 1;
     border-radius: 100%;
     top: 50%;
-    transform: translate(0,-50%),
+    transform: translate(0,-50%);
+    z-index: 10;
 }
 .slider__right{
     right: 0;
