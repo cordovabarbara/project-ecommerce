@@ -20,6 +20,7 @@ addProductToCart(data)
 }
 
     return (
+        
         <div className="product__general-box">
         <article className="product__box" onClick={handleSelectProductId}>
             <header className="product__header">

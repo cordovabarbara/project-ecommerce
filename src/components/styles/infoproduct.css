@@ -1,3 +1,4 @@
+
 .product__general-box{
   display: flex;
   flex-direction: column;
@@ -5,6 +6,7 @@
   align-items: center;
   margin-bottom: 2em;
   flex-wrap: wrap;
+
 }
 
 .product__box {

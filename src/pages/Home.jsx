@@ -59,7 +59,7 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
     </div>
 
 
-    <div>
+    <div className='info__px'>
       {
         productFilter?.map(prod => (
           <InfoProduct
