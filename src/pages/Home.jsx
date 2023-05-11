@@ -15,6 +15,8 @@ const Home = () => {
     to: Infinity,
   })
 
+const [menuOpen, setMenuOpen] = useState(false)
+
 const { productsGlobal }  = useSelector (state => state)
 
 const inputValue = useRef()
@@ -48,11 +50,13 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
     <>     
     <div className='home__product'>
     <input className='home__input' ref={inputValue} onChange={handleChangeinput} type="text" placeholder='What are you lookin for?'/>
-    <button className='btn__search'><i className='bx bx-search-alt-2'></i></button>
     </div>
 
+    <button className='btn__filter' onClick={() => setMenuOpen(!menuOpen)}><i className='bx bx-filter-alt' ></i></button>
+    <div className={`menu ${menuOpen ? 'open' : 'closed'}`} style={{right: 0}}>
     <FilterCategory/>
     <FilterByPrice setFromTo={setFromTo}/>
+    </div>
 
 
     <div>

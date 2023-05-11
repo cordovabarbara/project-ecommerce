@@ -3,7 +3,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-margin-bottom: 2em;
+margin-bottom: 0.4em;
 }
 
 .home__input{
@@ -13,15 +13,35 @@ margin-bottom: 2em;
     align-items: center;
 }
 
-.btn__search{
-    display: flex;
-    background-color: orangered;
+.btn__filter{
     border: none;
-    font-size: 20px;
     cursor: pointer;
-    color: white;
-    width: 50px;
+    color: orangered;
     height: 30px;
-    align-items: center;
-    justify-content: center;
+    width: 40px;
+    margin-bottom: 2em;
+    margin-left: 5em;
+    font-size: 20px;
+    background-color: white;
+
 }
+.menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .menu.open {
+    right: 0;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
