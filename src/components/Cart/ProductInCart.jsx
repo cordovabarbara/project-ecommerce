@@ -1,5 +1,6 @@
 import React from 'react'
 import useCrudCart from '../../hooks/useCrudCart'
+import './styles/productincar.css'
 
 const ProductInCart = ({ prodInCart }) => {
 
