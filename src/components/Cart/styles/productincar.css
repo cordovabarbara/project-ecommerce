@@ -50,8 +50,7 @@ font-weight: 300;
 font-size: 0,3rem;
 }
 
-
 .product_in_cart_price::before{
-    content: '$';
-    padding-right: 0.3em;
+content: '$';
+padding-right: 0.3em;
 }
