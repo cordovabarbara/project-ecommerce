@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllProductsCartThunk } from '../store/slices/cart.slice'
 import ProductInCart from '../components/Cart/ProductInCart'
 import usePurchase from '../hooks/usePurchase'
+import './styles/cart.css'
 
 const Cart = () => {
 
@@ -15,7 +16,7 @@ const Cart = () => {
   
   const { cartGlobal }  = useSelector(state => state)
 
-  const totalCartGlobal = cartGlobal?.reduce((acc, cv) => acc + cv.quantity * cv.product.price, 0)
+  const totalPriceCart = cartGlobal?.reduce((acc, cv) => acc + cv.quantity * cv.product.price, 0)
 
   const handlePurchase = () => {
     buyThisCart()
@@ -23,8 +24,10 @@ const Cart = () => {
 
 
   return (
-    <div>
-    {
+    <div className='cart'>
+      <h1 className='cart__title'>Cart</h1>
+      <div className='cart__container'>
+      {
         cartGlobal?.map (prodInCart => (
             <ProductInCart
             key={prodInCart.id}
@@ -32,13 +35,13 @@ const Cart = () => {
             />
         ))
     }
-    
-    <footer>
-      <h3>Total:{totalCartGlobal}</h3>
-      <button onClick={handlePurchase}> Buy now</button>
+    </div>
+    <footer className='cart__footer'>
+      <span className='cart__total_label'>Total</span>
+        <h3 className='cart__total__value'>{totalPriceCart}</h3>
+        <button onClick={handlePurchase} className='handlePurchase'>Buy now</button>
       </footer>
     </div>
-   
   )
 }
 

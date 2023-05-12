@@ -10,21 +10,19 @@ const ProductInCart = ({ prodInCart }) => {
     }
 
   return (
-    <article>
-        <header>
-            <img src={prodInCart.product.images[0].url} alt="" />
+    <article className='product_in_cart'>
+        <header className='product_in_cart_header'>
+            <img className='product_in_cart_images' src={prodInCart.product.images[0].url} alt="" />
         </header>
-        <div>
-          <h3>{prodInCart.product.title}</h3>
-        </div>
-        <button onClick={handleDeleteCart}>
+          <h3 className='product_in_cart_title'>{prodInCart.product.title}</h3>
+        <button className='btn_product_delete' onClick={handleDeleteCart}>
         <i className='bx bx-trash'></i>
         </button>
-        <footer>
-          <span>{prodInCart.quantity}</span>
-          <div>
-            <span>Subtotal</span>
-            <span>{prodInCart.product.price * prodInCart.quantity}</span>
+        <footer className='product_in_cart_footer'>
+          <span  className='product_in_cart_quantity'>{prodInCart.quantity}</span>
+          <div  className='product_in_cart_subtotal'>
+            <span className='product_in_cart_label'>Subtotal</span>
+            <span className='product_in_cart_price'>{prodInCart.product.price * prodInCart.quantity}</span>
           </div>
         </footer>
     </article>
