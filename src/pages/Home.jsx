@@ -54,6 +54,7 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
 
     <button className='btn__filter' onClick={() => setMenuOpen(!menuOpen)}><i className='bx bx-filter-alt' ></i></button>
     <div className={`menu ${menuOpen ? 'open' : 'closed'}`} style={{right: 0}}>
+    <button className='menu__close' onClick={() => setMenuOpen(false)}> x </button>
     <FilterCategory/>
     <FilterByPrice setFromTo={setFromTo}/>
     </div>
