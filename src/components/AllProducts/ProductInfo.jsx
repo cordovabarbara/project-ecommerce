@@ -6,7 +6,7 @@ const ProductInfo = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
     const { addProductToCart } = useCrudCart();
 
-    const plus = () => setQuantity(quantity + 1);
+    const plus = () => {setQuantity(quantity + 1)};
     const minus = () => {
         if (quantity - 1 >= 1) {
             setQuantity(quantity - 1);

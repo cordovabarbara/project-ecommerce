@@ -7,13 +7,13 @@ const ProductInCart = ({ prodCart }) => {
     const { deleteProductFromCart } = useCrudCart()
 
     const handleDeleteCart = () => {
-      deleteProductFromCart(prodCart?.id)
+      deleteProductFromCart(prodCart.id)
     }
 
   return (
     <article className='product_in_cart'>
         <header className='product_in_cart_header'>
-            <img className='product_in_cart_images' src={prodCart?.product?.productImgs[0]?.url} alt={prodCart?.product.title}/>
+            <img className='product_in_cart_images' src={prodCart?.product?.productImgs[0]?.url} alt=""/>
         </header>
           <h3 className='product_in_cart_title'>{prodCart?.product?.title}</h3>
         <button className='btn_product_delete' onClick={handleDeleteCart}>
@@ -23,7 +23,7 @@ const ProductInCart = ({ prodCart }) => {
           <span  className='product_in_cart_quantity'>{prodCart?.quantity}</span>
           <div  className='product_in_cart_subtotal'>
             <span className='product_in_cart_label'>Subtotal</span>
-            <span className='product_in_cart_price'>{prodCart?.product?.price} </span>
+            <span className='product_in_cart_price'>{prodCart?.product?.price * prodCart?.quantity} </span>
           </div>
         </footer>
     </article>

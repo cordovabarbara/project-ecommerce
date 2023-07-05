@@ -26,9 +26,9 @@ const handleChangeinput = () =>{
 
 }
 
-const productFilter = productsGlobal?.filter(product => product.title.toLowerCase().includes(inputSearch))
+const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().includes(inputSearch))
 
-.filter(product =>{
+.filter(prod =>{
   const from = +fromTo.from
   const to = +fromTo.to
   const price = product.price

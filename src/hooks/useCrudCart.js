@@ -10,6 +10,7 @@ const useCrudCart = () => {
     const addProductToCart = data =>{
         const URL_BASE = import.meta.env.VITE_REACT_APP_URL
         const url = `${URL_BASE}/cart`
+        
         axios.post(url, data, configToken ())
             .then(res => {
             console.log(res.data)

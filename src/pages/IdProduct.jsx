@@ -13,9 +13,7 @@ const URL_BASE = import.meta.env.VITE_REACT_APP_URL
 const url = `${URL_BASE}/products/${id}`
 
     const [product, getProductById] = useFetch(url)
-
-
-
+    
     useEffect(() => {
     getProductById()
     }, [id])

@@ -14,7 +14,6 @@ const usePurchase = () => {
 const dispatch = useDispatch()
 
     const buyThisCart = () =>{
-        const url = `https://e-commerce-api-v2.academlo.tech/api/v1/purchases`
         axios.post(url, {}, configToken())
         .then(res => {
             console.log(res.data)
@@ -24,7 +23,6 @@ const dispatch = useDispatch()
     }
 
     const getPurchased = () => {
-        const url= `https://e-commerce-api-v2.academlo.tech/api/v1/purchases`
         axios.get(url, configToken())
         .then(res => setPurchases(res.data))
         .catch (err =>console.log(err)
