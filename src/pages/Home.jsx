@@ -26,12 +26,12 @@ const handleChangeinput = () =>{
 
 }
 
-const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().includes(inputSearch))
+const productFilter = productsGlobal?.filter(product => product.title.toLowerCase().includes(inputSearch))
 
-.filter(prod =>{
+.filter(product =>{
   const from = +fromTo.from
   const to = +fromTo.to
-  const price = prod.price
+  const price = product.price
   if( from && to){
     return from <= price && price <= to
   }
@@ -62,10 +62,10 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
 
     <div className='info__px'>
       {
-        productFilter?.map(prod => (
+        productFilter?.map(product => (
           <InfoProduct
-            key={prod.id}
-            prod ={prod}
+            key={product.id}
+            product ={product}
           />
         ))
       }

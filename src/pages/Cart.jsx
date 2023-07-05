@@ -28,10 +28,10 @@ const Cart = () => {
       <h1 className='cart__title'>Cart</h1>
       <div className='cart__container'>
       {
-        cartGlobal?.map (prodInCart => (
+        cartGlobal?.map (prodCart => (
             <ProductInCart
-            key={prodInCart.id}
-            prodInCart={prodInCart}
+            key={prodCart.id}
+            prodInCart={prodCart}
             />
         ))
     }

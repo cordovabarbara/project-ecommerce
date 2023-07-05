@@ -33,9 +33,9 @@ const Header = () => {
 
     return (
       <header className='header__box'>
-          <h1 className='header__title'><Link className='navbar__title' to='/'>E-commerce</Link></h1>
-            <button className='btn__menu' onClick={toggleMenuVisible}>
-              <i className='bx bx-menu'></i></button>
+        <h1 className='header__title'><Link className='navbar__title' to='/'>E-commerce</Link></h1>
+          <button className='btn__menu' onClick={toggleMenuVisible}>
+            <i className='bx bx-menu'></i></button>
               {visibleMenu && (
                 <nav className='navbar'>
                   <ul className={`list__box ${visibleMenu ? 'show' : ''}`}>
