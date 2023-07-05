@@ -10,7 +10,6 @@ const useCrudCart = () => {
     const addProductToCart = data =>{
         const URL_BASE = import.meta.env.VITE_REACT_APP_URL
         const url = `${URL_BASE}/cart`
-        
         axios.post(url, data, configToken ())
             .then(res => {
             console.log(res.data)
@@ -25,8 +24,7 @@ const useCrudCart = () => {
     }
 
     const deleteProductFromCart = id =>{
-        const URL_BASE = import.meta.env.VITE_REACT_APP_URL
-        const url = `${URL_BASE}/cart/${id}`
+        const url = `https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`
         axios.delete(url, configToken())
         .then(res => {
             console.log(res.data)
@@ -36,8 +34,7 @@ const useCrudCart = () => {
     }
 
     const updateProdutInCart = (id, data) => {
-        const URL_BASE = import.meta.env.VITE_REACT_APP_URL
-        const url = `${URL_BASE}/cart/${id}`
+        const url = `https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`
         axios.put(url, data, configToken())
         .then (res => {
             console.log(res.data)

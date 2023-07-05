@@ -3,16 +3,14 @@ import axios from "axios"
 const useAuthentication = () => {
 
     const createNewUser = data =>{
-        const URL_BASE = import.meta.env.VITE_REACT_APP_URL
-        const url = `${URL_BASE}/users`
+        const url = `https://e-commerce-api-v2.academlo.tech/api/v1/users`
         axios.post(url, data)
         .then(res => console.log(res.data))
         .catch (error => console.log(error))
     }
 
     const loginUser = data => {
-        const URL_BASE = import.meta.env.VITE_REACT_APP_URL
-        const url = `${URL_BASE}/users/login`
+        const url = `https://e-commerce-api-v2.academlo.tech/api/v1/users/login`
         axios.post(url, data)
         .then(res => {
             localStorage.setItem('token', res.data.token)

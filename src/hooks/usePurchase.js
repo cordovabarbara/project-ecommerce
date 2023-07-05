@@ -4,9 +4,6 @@ import axios from "axios"
 import { useState } from "react"
 import { getAllProductsCartThunk } from "../store/slices/cart.slice"
 
-const URL_BASE = import.meta.env.VITE_REACT_APP_URL
-const url = `${URL_BASE}/purchase`
-
 const usePurchase = () => {
 
     const [purchases, setPurchases] = useState()

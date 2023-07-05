@@ -31,7 +31,7 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
 .filter(prod =>{
   const from = +fromTo.from
   const to = +fromTo.to
-  const price = product.price
+  const price = prod.price
   if( from && to){
     return from <= price && price <= to
   }
@@ -62,10 +62,10 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
 
     <div className='info__px'>
       {
-        productFilter?.map(product => (
+        productFilter?.map(prod => (
           <InfoProduct
-            key={product.id}
-            product ={product}
+            key={prod.id}
+            prod ={prod}
           />
         ))
       }

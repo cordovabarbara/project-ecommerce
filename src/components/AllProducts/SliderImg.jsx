@@ -33,7 +33,7 @@ const SliderImg = ({product}) => {
     <button onClick={handlePrevious}  className='slider__btn slider__left'>&lt;</button>
       <div style={objStyle} className='slider__mov'>
         {
-          product?.productImgs.map(imgProd =>(
+        product?.images.map(imgProd =>(
           <div key={imgProd.id} className='slider__box-img'>
           <img 
           className='slider__img' 
