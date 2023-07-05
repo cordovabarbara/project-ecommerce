@@ -62,10 +62,10 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
 
     <div className='info__px'>
       {
-        productFilter?.map(prod => (
+        productFilter?.map(product => (
           <InfoProduct
-            key={prod.id}
-            prod ={prod}
+            key={product.id}
+            product ={product}
           />
         ))
       }

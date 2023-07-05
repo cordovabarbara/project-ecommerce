@@ -6,9 +6,11 @@ import { useDispatch } from "react-redux"
 
 const FilterCategory = () => {
 
+    const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+
   const dispatch = useDispatch()
 
-    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/categories'
+    const url = `${URL_BASE}/categories`
 
 const [categories, getAllCategories]    = useFetch(url)
 
@@ -17,7 +19,7 @@ useEffect(() => {
 }, [])
 
 const handleClickCategories = id =>{
-    const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${id}`
+    const url = `${URL_BASE}/products?categoryId=${id}`
     dispatch(getAllProductsThunk(url))
 }
 
@@ -31,7 +33,7 @@ const handleAllProducts = () => {
             <ul className='filter__list'>
                 <li className='filter__opt' onClick={handleAllProducts}>All Products</li>
             {
-                categories?.map( category => (
+                categories?.map(category => (
                     <li className='filter__item' onClick={ () => handleClickCategories(category.id)} key={category.id}>{category.name}</li>
                 ))
             }

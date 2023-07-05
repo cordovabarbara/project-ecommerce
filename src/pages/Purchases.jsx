@@ -14,10 +14,10 @@ useEffect(() => {
   return (
     <div>Purchases
     {
-      purchases?.map(prodPurchase => (
+      purchases?.map(prodPurchased => (
         <ProductPurchase
-          key={prodPurchase.id}
-          prodPurchase={prodPurchase}
+          key={prodPurchased.id}
+          prodPurchased={prodPurchased}
         />
 
       ))
