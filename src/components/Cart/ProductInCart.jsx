@@ -20,10 +20,10 @@ const ProductInCart = ({ prodCart }) => {
         <i className='bx bx-trash'></i>
         </button>
         <footer className='product_in_cart_footer'>
-          <span  className='product_in_cart_quantity'>{prodCart.product.quantity}</span>
+          <span  className='product_in_cart_quantity'>{prodCart.quantity}</span>
           <div  className='product_in_cart_subtotal'>
             <span className='product_in_cart_label'>Subtotal</span>
-            <span className='product_in_cart_price'>{prodCart.product.price * prodCart.product.quantity} </span>
+            <span className='product_in_cart_price'>{prodCart?.product?.price * prodCart?.quantity} </span>
           </div>
         </footer>
     </article>
