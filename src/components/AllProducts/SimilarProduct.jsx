@@ -23,7 +23,7 @@ useEffect(() => {
                     return(
                         <InfoProduct
                         key={prod.id}
-                        prod={prod}
+                        product={prod}
                         />
                     )
                 }

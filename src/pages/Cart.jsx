@@ -16,7 +16,7 @@ const Cart = () => {
   
   const { cartGlobal }  = useSelector(state => state)
 
-  const totalPriceCart = cartGlobal?.reduce((acc, cv) => acc + cv.quantity * cv.product.price, 0)
+  const totalPriceCart = cartGlobal?.reduce((acc, cv) => acc + cv.quantity * cv.product?.price, 0)
 
   const handlePurchase = () => {
     buyThisCart()
@@ -31,7 +31,7 @@ const Cart = () => {
         cartGlobal?.map (prodCart => (
             <ProductInCart
             key={prodCart.id}
-            prodInCart={prodCart}
+            prodCart={prodCart}
             />
         ))
     }
