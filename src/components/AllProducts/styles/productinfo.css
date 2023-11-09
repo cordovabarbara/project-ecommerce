@@ -6,11 +6,11 @@
 }
 
 .product__brand{
-    color:rgb(158, 158, 158);
+    color:var(--titlecolor);
 }
 
 .product__title{
-    color: rgb(80, 80, 80);
+    color: var(--color1);
 }
 
 .product__descri{
@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: center;
     background-color: orangered;
-    color: white;
+    color: var(--color2);
     transition: background-color 0.4s ease;
 }
 
@@ -76,7 +76,7 @@
   }
 
 .product__purchase{
-    background-color: orangered;
+    background-color: var(--color1);
     height: 40px;
     color: white;
     font-size: 17px;
@@ -85,6 +85,6 @@
 }
 
 .product__purchase:hover {
-    background-color: rgb(255, 160, 126);
+    background-color: var(--color-cart);
   }
 

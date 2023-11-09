@@ -16,7 +16,7 @@ const [categories, getAllCategories]    = useFetch(url)
 
 useEffect(() => {
     getAllCategories()
-}, [])
+}, [getAllCategories])
 
 const handleClickCategories = id =>{
     const url = `${URL_BASE}/products?categoryId=${id}`

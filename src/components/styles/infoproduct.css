@@ -12,7 +12,7 @@
 .product__box {
   width: 100%;
   max-width: 370px;
-  border: 1px solid grey;
+  border: 1px solid #12486B;
   background-color: white;
 }
 
@@ -93,12 +93,12 @@
   width: 3.2em;
   border-radius: 100%;
   position: absolute;
-  background-color: orangered;
+  background-color: var( --color-cart);
   transition: background-color 0.4s ease;
 }
 
 .product__btn:hover{
-    background-color: rgb(255, 160, 126);
+    background-color:var(--color1);
 }
 
 .bx-cart-alt {
