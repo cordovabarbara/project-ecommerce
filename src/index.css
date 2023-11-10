@@ -5,6 +5,7 @@
   --color1:#33d49e;
   --color-cart:#022c23;
   --color2:#ffffff;
+  --buttons:#04976d;
 }
 
 
@@ -22,7 +23,7 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  ul {
+  ul, li{
     list-style: none;
     padding-left: 0;
   }

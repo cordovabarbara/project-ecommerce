@@ -1,20 +1,75 @@
 .header__box{
     display: flex;
     flex-direction: row;
-    justify-content: space-around
-    
+    justify-content:space-between;
 }
 
 .header__logo{
     display: flex;
-    gap: 1em;
-    width: 200px;
+    width: 250px;
 }
+
+/***** NAVBAR***/
 
 .navbar__ul{
-    display: flex;
-    gap:1em
+    
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    right: 0;
+    width: 65px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    background-color:var(--color2);
+
+    animation-name: slide-in;
+    animation-duration: 0.3s;
+    animation-fill-mode:backwards;
 }
 
+@keyframes slide-in {
+    from {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 
+.navbar__ul.open {
+    display: none;
+}
+
+.navbar__ul li {
+    cursor: pointer;
+    font-size: 38px;
+    color: var(--titlecolor);
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Estilo del tooltip */
+.navbar__ul li:hover::before {
+    text-align: center;
+    content: attr(title);
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width: 70px;
+    height: auto;
+    padding: 5px;
+    background-color: var(--titlecolor);
+    color: var(--color2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 11px;
+    pointer-events: auto;
+}
+
+.bx-menu {
+    font-size: 45px;
+    cursor: pointer;
+    color:var(--titlecolor);
+}
 
