@@ -30,8 +30,8 @@ margin: 3em 0 4em 0;
     right: -300px;
     width: 300px;
     height: 100%;
-    background-color:#ffffffec;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+    background-color:var(--background1);
+    box-shadow: var(--box-shadow);
     z-index: 1;
     opacity: 0;
     transform: translateX(400px);
@@ -45,15 +45,15 @@ margin: 3em 0 4em 0;
 }
 
 .menu__close{
-    color: orangered;
+    color: var(--titlecolor);
     font-size: 23px;
     font-weight: bold;
-    background-color: white;
+    background-color: var(--color2);
 }
 
 .title1{
     margin-top: 1.5em;
-    color: orangered;
+    color: var(--titlecolor);
     font-size: 23px;
     letter-spacing: 2px;
 }
@@ -77,8 +77,8 @@ margin: 3em 0 4em 0;
 }
 
 .filter__opt:hover{
-    color: white;
-    background-color: orangered;
+    color: var(--color2);
+    background-color: var(--buttons);
     max-width:fit-content;
 }
 .filter__item{
@@ -86,8 +86,8 @@ margin: 3em 0 4em 0;
 }
 
 .filter__item:hover{
-    color: white;
-    background-color: orangered;
+    color: var(--color2);
+    background-color: var(--buttons);
     max-width:fit-content;
 }
 
@@ -101,7 +101,7 @@ margin: 3em 0 4em 0;
 
 .price__title{
 margin-top: 1em;
-color: orangered;
+color: var(--titlecolor);
 font-size: 23px;
 letter-spacing: 2px;
 }
@@ -110,7 +110,7 @@ letter-spacing: 2px;
     width:min-content;
     height: 25px;
     border-radius: 0.5em;
-    border: 2px solid orangered;
+    border: 2px solid var(--titlecolor);
     margin-top: 1em;
     margin-left: 1em;
 }
@@ -120,19 +120,22 @@ letter-spacing: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orangered;
-    color: white;
+    background-color: var(--color-cart);
+    color: var(--color2);
     height: 28px;
     width: 120px;
     border-radius: 1em;
     letter-spacing: 2px;
 }
+.filter__btn:hover{
+    background-color: var(--color1);
+    color: var(--color-cart);
+    font-weight: bold;
 
-@media (min-width: 767px){
-    .btn__filter{
-        margin-left: 39.5em;
-    }
-    .info__px{
+}
+
+@media (min-width: 768px){
+    .info__px {
         display: grid;
         grid-template-columns: repeat(4, 3fr); 
     }
@@ -141,10 +144,11 @@ letter-spacing: 2px;
         width: 90%;
         min-height: 100%;
         position: relative;
-      }
+    }
+
     .product__btn{
         bottom: 2em;
         right: 2em;
         position: absolute;
     }
-    }
+}

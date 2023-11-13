@@ -13,11 +13,11 @@ const FilterByPrice = ({ setFromTo }) => {
 
   return (
     <div className="price__box">
-      <h3 className="price__title">Price</h3>
+      <h3 className="price__title">Precio</h3>
       <form onSubmit={handleSubmit(submit)}>
         <div className="price__opt">
           <label className="label__name" htmlFor="from">
-            From
+            Desde
           </label>
           <input
             className="input__price"
@@ -26,7 +26,7 @@ const FilterByPrice = ({ setFromTo }) => {
             id="from"/>
         <div>
           <label className="label__name" htmlFor="to">
-            To
+            Hasta
           </label>
           <input
             className="input__price"
@@ -36,7 +36,7 @@ const FilterByPrice = ({ setFromTo }) => {
           />
           </div>
         </div>
-        <button className="filter__btn">Filter Price</button>
+        <button className="filter__btn">Aplicar</button>
       </form>
     </div>
   );

@@ -29,9 +29,9 @@ const handleAllProducts = () => {
 
   return (
     <section className="filter__bar">
-        <h3 className="title1">Categories</h3>
+        <h3 className="title1">Categorias</h3>
             <ul className='filter__list'>
-                <li className='filter__opt' onClick={handleAllProducts}>All Products</li>
+                <li className='filter__opt' onClick={handleAllProducts}>Todos los Productos</li>
             {
                 categories?.map(category => (
                     <li className='filter__item' onClick={ () => handleClickCategories(category.id)} key={category.id}>{category.name}</li>
