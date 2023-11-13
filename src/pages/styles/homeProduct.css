@@ -1,31 +1,29 @@
 .home__product{
 display: flex;
-flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
-margin-bottom: 0.4em;
+margin: 3em 0 4em 0;
+
 }
 
 .home__input{
-    width: 300px;
+    width: 350px;
     height: 30px;
     justify-content: center;
     align-items: center;
+
 }
 
 .btn__filter{
-    padding-left: 1.7em;
     border: none;
     cursor: pointer;
-    color: orangered;
-    height: 30px;
-    width: 40px;
-    margin-bottom: 2em;
-    font-size: 20px;
-    background-color: white;
+    color: var(--titlecolor);
+    font-size: 22px;
+    background-color: var(--color2);
 
 }
+
 .menu {
     position: fixed;
     top: 0;

@@ -17,7 +17,7 @@ const useCrudCart = () => {
         })
         .catch (err => {
             console.log(err)
-            if (err.response?.data?.error === 'Product already added to cat'){
+            if (err.response?.data?.error === 'El producto ya esta en el carrito'){
                 //ejecutar el update
             }
     })

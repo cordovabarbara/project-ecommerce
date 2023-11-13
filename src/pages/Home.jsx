@@ -49,10 +49,10 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
   return (
     <>     
     <div className='home__product'>
-    <input className='home__input' ref={inputValue} onChange={handleChangeinput} type="text" placeholder='What are you lookin for?'/>
+    <input className='home__input' ref={inputValue} onChange={handleChangeinput} type="text" placeholder='Que estas buscando?'/>
+    <button className='btn__filter' onClick={() => setMenuOpen(!menuOpen)}><i className='bx bx-filter-alt' ></i></button>
     </div>
 
-    <button className='btn__filter' onClick={() => setMenuOpen(!menuOpen)}><i className='bx bx-filter-alt' ></i></button>
     <div className={`menu ${menuOpen ? 'open' : 'closed'}`} style={{right: 0}}>
     <button className='menu__close' onClick={() => setMenuOpen(false)}> x </button>
     <FilterCategory/>

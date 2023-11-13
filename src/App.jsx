@@ -11,6 +11,7 @@ import Login from './pages/Login'
 import configToken from './utils/configToken'
 import Cart from './pages/Cart'
 import Purchases from './pages/Purchases'
+import axios from 'axios'
 
 function App() {
 
@@ -18,7 +19,7 @@ const dispatch = useDispatch ()
 
   useEffect(() => {
     dispatch (getAllProductsThunk ())
-  }, [])
+  }, )
 
   const getPostCart = (url,data) => {
     axios.post (url, data, configToken ())

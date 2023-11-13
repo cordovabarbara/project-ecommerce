@@ -1,4 +1,3 @@
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import useAuthentication from '../hooks/useAuthentication'
 import defaultValues from '../utils/defaultValues'
@@ -20,14 +19,14 @@ const submit = data => {
 
   return (
     <form onSubmit={handleSubmit (submit)}>
-    <h2> Create a new User</h2>
+    <h2>Si aun no tienes cuentas, Registrate</h2>
     <div>
-    <label htmlFor="firstName">First Name</label>
+    <label htmlFor="firstName">Primer Nombre</label>
     <input {...register('firstName')}type="text" id='firstName'></input>
     </div>
 
     <div>
-    <label htmlFor="lastName">Last Name</label>
+    <label htmlFor="lastName">Apellido</label>
     <input {...register('lastName')} type="text" id='lastName'></input>
     </div>
 
@@ -42,10 +41,10 @@ const submit = data => {
     </div>
 
     <div>
-    <label htmlFor="phone">Phone</label>
+    <label htmlFor="phone">Telefono</label>
     <input {...register('phone')} type="tel" id='phone'></input>
     </div>
-    <button>Register</button>
+    <button>Registrarse</button>
     </form>
   )
 }

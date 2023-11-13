@@ -6,6 +6,7 @@
   --color-cart:#022c23;
   --color2:#ffffff;
   --buttons:#04976d;
+  --header: #0F0F0F;
 }
 
 
@@ -26,6 +27,7 @@
   ul, li{
     list-style: none;
     padding-left: 0;
+    color: inherit;
   }
   input {
     outline: none;
@@ -42,6 +44,7 @@
 
   a{
     text-decoration: none;
+    color: inherit;
   }
   
   img {

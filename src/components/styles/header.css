@@ -11,12 +11,17 @@
 
 /*NavBar*/
 
+.navbar{
+    display: flex;
+    gap: 1em;
+}
+
 .navbar__ul{
     flex-direction: column;
     text-align: center;
     justify-content: center;
     right: 0;
-    width: 65px;
+    width: 50px;
     z-index: 1;
     position: absolute;
     border-radius: 10px;
@@ -24,15 +29,15 @@
 
     animation-name: slide-in;
     animation-duration: 0.3s;
-    animation-fill-mode:backwards;
+    animation-fill-mode:forwards;
 }
 
 @keyframes slide-in {
     from {
-        transform: translateY(40%);
+        transform: translateY(50%);
     }
     to {
-        transform: translateY(0);
+        transform: translateY(10%);
     }
 }
 
@@ -42,9 +47,9 @@
 
 .navbar__ul li {
     cursor: pointer;
-    font-size: 38px;
-    color: var(--titlecolor);
-    margin: 30px 0;
+    font-size: 32px;
+    color: var( --titlecolor);
+    margin: 25px 0;
     position: relative;
 }
 
@@ -53,22 +58,67 @@
     text-align: center;
     content: attr(title);
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 30px;
-    width: 70px;
+    width: 65px;
     height: auto;
     padding: 5px;
     background-color: var(--titlecolor);
     color: var(--color2);
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 11px;
+    font-size: 10px;
     pointer-events: auto;
 }
 
 .bx-menu {
-    font-size: 45px;
+    font-size: 35px;
     cursor: pointer;
     color:var(--titlecolor);
 }
 
+@media screen and (min-width: 768px){
+
+    .header__box {
+        flex-direction: row;
+        justify-content:space-between;
+        background-color: var(--header);
+        height: 3.2em;
+      }
+    
+      .header__logo {
+        width: 320px;
+        margin: 0 6em
+      }
+    
+      .navbar {
+        display: flex;
+        flex-direction: row;
+      }
+      .hamburguer{
+        display: none;
+      }
+      .bxs-cart {
+        margin: 1px 0;
+        right: 9.4em;
+        position: absolute;
+        color: var(--color1);
+      }
+      .navbar__ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1em;
+        width: auto;
+        text-align: left;
+        position: static;
+        animation: none;
+        height: 3em;
+        background-color: transparent;
+    }
+      .navbar__ul li {
+        margin: 4px 0.5em;
+        color: var(--color1);
+    }
+    
+    }

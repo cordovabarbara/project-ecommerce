@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/infoproduct.css";
 import { useNavigate } from "react-router-dom";
 import useCrudCart from "../hooks/useCrudCart";
