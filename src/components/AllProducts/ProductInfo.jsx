@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import useCrudCart from "../../hooks/useCrudCart";
 import './styles/productinfo.css'
 
@@ -22,6 +22,7 @@ const ProductInfo = ({ product }) => {
     };
     return (
         <section className="productinfo__box">
+            <h2 className="product__descri">{product?.brand}</h2>
             <h2 className="product__title">{product?.title}</h2>
             <p className="product__descri">{product?.description}</p>
 
