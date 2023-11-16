@@ -22,8 +22,8 @@ const ProductInfo = ({ product }) => {
     };
     return (
         <section className="productinfo__box">
-            <h2 className="product__descri">{product?.brand}</h2>
-            <h2 className="product__title">{product?.title}</h2>
+            <h2 className="product__brand">{product?.brand}</h2>
+            <h3 className="product__title">{product?.title}</h3>
             <p className="product__descri">{product?.description}</p>
 
             <div className="product__info">

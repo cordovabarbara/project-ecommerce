@@ -6,11 +6,11 @@
 }
 
 .product__brand{
-    color:var(--titlecolor);
-}
+    color: var(--color1);
+  }
 
 .product__title{
-    color: var(--color1);
+    color: var(--buttons);
 }
 
 .product__descri{

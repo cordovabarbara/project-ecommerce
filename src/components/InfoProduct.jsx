@@ -27,7 +27,7 @@ addProductToCart(data)
                 <img className="product__img product__img2" src={product?.productImgs?.[1]?.url}  alt="" />
             </header>
             <section className="product__setion">
-                <h2 className="product__title">{product?.brand}</h2>
+                <h2 className="product__brand">{product?.brand}</h2>
                 <h3 className="product__title">{product?.title}</h3>
             </section>
             <div className="product__footer">
