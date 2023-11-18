@@ -78,7 +78,7 @@ margin: 3em 0 4em 0;
 
 .filter__opt:hover{
     color: var(--color2);
-    background-color: var(--buttons);
+    background-color: var(--titlecolor);
     max-width:fit-content;
 }
 .filter__item{
@@ -87,7 +87,7 @@ margin: 3em 0 4em 0;
 
 .filter__item:hover{
     color: var(--color2);
-    background-color: var(--buttons);
+    background-color: var(--titlecolor);
     max-width:fit-content;
 }
 

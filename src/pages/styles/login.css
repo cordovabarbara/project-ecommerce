@@ -1,11 +1,42 @@
 .login__ppl{
+    padding: 4em 0em 3em 0 ;
+    text-align: center;
+}
+
+.login__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login__box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    text-align: center;
+    gap: 1em;
+    margin: 2em;
 }
-
 .login__title{
-    color: orangered;
+    color: var(--color1);
+}
+.login__prueba{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    gap: 1em;
+    margin-top: 1em;
+    background-color: var(--color1);
+    padding: 1em 0 1em 0;
+}
+.log__btn{
+    color: var(--color2);
+    width: 100px;
+    height: 35px;
+    border-radius: 50em;
+    background-color: var(--color-cart);
+}
+.log__btn:hover{
+    background-color: var( --color1);
 }

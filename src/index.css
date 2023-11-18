@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root{
-  --titlecolor: #0fba86;
-  --color1:#33d49e;
-  --color-cart:#022c23;
+  --titlecolor: #FBB454;
+  --color1:#FBB454;
+  --color-cart:#860A35;
   --color2:#ffffff;
-  --buttons:#04976d;
-  --header: #0F0F0F;
+  --buttons:#323232;
+  --header: #323232;
   --box-shadow:0 0 10px rgba(0, 0, 0, 0.26);
   --background1:#ffffffec;
 }

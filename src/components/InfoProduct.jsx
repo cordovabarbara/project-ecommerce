@@ -23,8 +23,8 @@ addProductToCart(data)
         <div className="product__general-box">
         <article className="product__box" onClick={handleSelectProductId}>
             <header className="product__header">
-                <img className="product__img product__img1" src={product?.productImgs?.[0]?.url} alt="" />
-                <img className="product__img product__img2" src={product?.productImgs?.[1]?.url}  alt="" />
+                <img className="product__img product__img1" src={product?.productImgs?.[1]?.url} alt="" />
+                <img className="product__img product__img2" src={product?.productImgs?.[2]?.url}  alt="" />
             </header>
             <section className="product__setion">
                 <h2 className="product__brand">{product?.brand}</h2>

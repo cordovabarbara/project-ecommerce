@@ -1,4 +1,4 @@
-import React from 'react'
+
 import useAuthentication from '../hooks/useAuthentication'
 import '../pages/styles/login.css'
 
@@ -18,17 +18,18 @@ const Login = () => {
   return (
     <div className='login__ppl'>
     <form className='login__form' onSubmit={handleLogin}>
-        <h2 className='login__title'>Login</h2>
+        <h2 className='login__title'>Ingresar</h2>
+        <div className='login__prueba'>
+        <p>email: usuario1@gmail.com</p>
+        <p>password: 654321</p>
+        </div>
         <div className='login__box'>
             <label htmlFor="email">Email</label>
             <input type="email" id='email'></input>
-        </div>
-
-    <div>
         <label htmlFor="password">Password</label>
         <input type="password" id='password'></input>
         </div>
-    <button> Log in</button>
+    <button className='log__btn'> Log in</button>
     </form>
     </div>
   )
