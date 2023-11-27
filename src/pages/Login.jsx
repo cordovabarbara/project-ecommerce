@@ -2,11 +2,14 @@
 import { useState } from 'react';
 import useAuthentication from '../hooks/useAuthentication'
 import '../pages/styles/login.css'
+import { useNavigate } from 'react-router-dom';
+import '../pages/WelcomePage'
 
 const Login = () => {
 
     const { loginUser }= useAuthentication ()
-    const [welcomeMessage, setWelcomeMessage] = useState('');
+    const [loggedInUser, setLoggedInUser] = useState(null)
+    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -16,7 +19,8 @@ const Login = () => {
     
         try {
           await loginUser(data);
-          setWelcomeMessage(`¡Bienvenido de vuelta, ${email}!`);
+          setLoggedInUser(email);
+          navigate('/WelcomePage');
         } catch (error) {
           console.error('Error al iniciar sesión:', error);
         }
@@ -40,11 +44,6 @@ const Login = () => {
         </div>
     <button className='log__btn'> Log in</button>
     </form>
-    {welcomeMessage && (
-        <div className="welcome-message">
-          <p>{welcomeMessage}</p>
-          </div>
-      )}
     </div>
   );
 };

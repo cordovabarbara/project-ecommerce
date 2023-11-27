@@ -12,6 +12,7 @@ import configToken from './utils/configToken'
 import Cart from './pages/Cart'
 import Purchases from './pages/Purchases'
 import axios from 'axios'
+import WelcomePage from './pages/WelcomePage'
 
 function App() {
 
@@ -35,6 +36,7 @@ return (
     <Route path='/' element={<Home />}/>
     <Route path='/register' element={<Register />}/>
     <Route path='/login' element={<Login />}/>
+    <Route path='/WelcomePage' element={<WelcomePage/>}/>
     <Route path='/product/:id' element={<IdProduct />}/>
     <Route path='/cart' element={<Cart />}/>
     <Route path='/purchase' element={<Purchases />}/>
