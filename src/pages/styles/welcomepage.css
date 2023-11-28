@@ -1,0 +1,25 @@
+.welcome__page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-cart);
+    gap: 1em;
+}
+
+.welcome__btn{
+    margin: 1em;
+    width: 150px;
+    height:50px;
+    border-radius: 1em;
+    background-color: var(--titlecolor);
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.welcome__btn:hover{
+    background-color: var( --color-cart);
+}
