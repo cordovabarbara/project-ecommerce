@@ -1,0 +1,36 @@
+.register__box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: center;
+}
+
+.register__ttl {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Ajusta el ancho de todos los elementos en el mismo tamaño */
+  }
+  
+  .register__ttl label {
+    width: 120px; /* Ancho fijo para las etiquetas */
+    margin-right: 10px; /* Espacio entre la etiqueta y el input */
+  }
+  
+  .register__ttl input {
+    flex: 2;
+  }
+  
+  .regiter__btn{
+    align-items: center;
+  }
+
+  @media (min-width: 767px){
+    .register__box {
+        width: 50%; /* Ajusta el ancho del formulario */
+        margin: 0 auto; /* Centra el formulario horizontalmente */
+      }
+    
+      .register__ttl label {
+        width: 200px; /* Ajusta el ancho de las etiquetas para dispositivos más grandes */
+      }
+    }
