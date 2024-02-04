@@ -13,6 +13,8 @@ import Cart from './pages/Cart'
 import Purchases from './pages/Purchases'
 import axios from 'axios'
 import WelcomePage from './pages/WelcomePage'
+import Footer from './components/shared/footer'
+
 
 function App() {
 
@@ -42,6 +44,7 @@ return (
     <Route path='/purchase' element={<Purchases />}/>
     <Route/>
     </Routes>
+    <Footer/>
     </div>
   )
 }

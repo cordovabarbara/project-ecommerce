@@ -13,7 +13,7 @@ const Carrusel = () => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 2500); // ajustar la velocidad de cambio automático
+    }, 3000); // ajustar la velocidad de cambio automático
 
     return () => clearInterval(interval);
   }, []);
