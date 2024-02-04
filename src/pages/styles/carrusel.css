@@ -1,0 +1,35 @@
+/* carrusel.css */
+.carrusel-container {
+    padding-top: 4em;
+    margin: 0 auto;
+    width: 85%;
+  }
+  
+  .carrusel-slide img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .slick-dots li button {
+    font-size: 10px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .slick-dots li.slick-active button {
+    color: #000;
+  }
+  

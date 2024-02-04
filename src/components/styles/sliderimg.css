@@ -14,7 +14,7 @@
 }
 
 .slider__box-img{
-    padding: 2em;
+    padding: 1em;
     width: 100%;
     aspect-ratio: 1.5;
 }
@@ -28,9 +28,9 @@
 .slider__btn{
     width: 2.3em;
     position: absolute;
-    background-color: orangered;
-    color: white;
-    font-size: medium;
+    background-color: var(--color-cart);
+    color: var(--color2);
+    font-size: large;
     aspect-ratio: 1;
     border-radius: 100%;
     top: 50%;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import usePurchase from '../hooks/usePurchase'
 import ProductPurchase from '../components/Purchases/ProductPurchase'
 

@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import InfoProduct from '../components/InfoProduct';
 import './styles/homeProduct.css'
 import FilterCategory from '../components/FilterCategory';
 import FilterByPrice from '../components/FilterByPrice';
+import Carruselhome from '../utils/Carruselhome';
 
 
 const Home = () => {
@@ -47,7 +48,8 @@ const productFilter = productsGlobal?.filter(prod => prod.title.toLowerCase().in
 })
 
   return (
-    <>     
+    <>
+    <Carruselhome/>  
     <div className='home__product'>
     <input className='home__input' ref={inputValue} onChange={handleChangeinput} type="text" placeholder='Que estas buscando?'/>
     <button className='btn__filter' onClick={() => setMenuOpen(!menuOpen)}><i className='bx bx-filter-alt' ></i></button>

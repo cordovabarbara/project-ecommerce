@@ -22,9 +22,7 @@
 .product__info{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
-
 
 .product__price1{
     color:rgb(158, 158, 158);
@@ -47,8 +45,6 @@
 .product__btns{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
- 
 }
 
 .btn__px{
@@ -66,7 +62,7 @@
     border: none;
     align-items: center;
     justify-content: center;
-    background-color: orangered;
+    background-color: var(--color-cart);
     color: var(--color2);
     transition: background-color 0.4s ease;
 }
