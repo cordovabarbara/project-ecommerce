@@ -3,7 +3,7 @@ import "../styles/footer.css";
 const Footer = () => {
   return (
     <footer className="footer__container">
-      <div className="footer__content">Munco PC creado por Barbara Cordova</div>
+      <div className="footer__content">Mundo PC creado por Barbara Cordova</div>
       <div className="footer__icons">
       <a href="https://www.linkedin.com/in/aliendo-barbara/">
               <i className="bx bxl-linkedin-square"></i>
