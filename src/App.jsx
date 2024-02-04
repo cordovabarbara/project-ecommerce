@@ -34,6 +34,7 @@ const dispatch = useDispatch ()
 return (
   <div className='app'>
   <Header/>
+
   <Routes>
     <Route path='/' element={<Home />}/>
     <Route path='/register' element={<Register />}/>
@@ -45,6 +46,7 @@ return (
     <Route/>
     </Routes>
     <Footer/>
+
     </div>
   )
 }
