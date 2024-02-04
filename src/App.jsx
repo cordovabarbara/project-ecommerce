@@ -13,7 +13,7 @@ import Cart from './pages/Cart'
 import Purchases from './pages/Purchases'
 import axios from 'axios'
 import WelcomePage from './pages/WelcomePage'
-import Footer from './components/shared/footer'
+import Footer from './components/shared/Footer'
 
 
 function App() {
