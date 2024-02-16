@@ -5,9 +5,10 @@
   gap: 1em;
   background-color: var(--header);
   color:var( --titlecolor);
-  padding: 20px;
   width: 100%;
   bottom: 0;
+  position: fixed;
+
   }
   
   .footer__content {
